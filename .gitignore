@@ -1,0 +1,106 @@
+# ==============================================================================
+# Modular Monolith Standard .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# System & OS Files
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# ------------------------------------------------------------------------------
+# IDEs and Code Editors
+# ------------------------------------------------------------------------------
+# JetBrains (IntelliJ, WebStorm, Rider, etc.)
+.idea/
+*.iml
+*.iws
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+# Visual Studio / Rider (C# / .NET Monoliths)
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+Bin/
+Obj/
+bin/
+obj/
+
+# ------------------------------------------------------------------------------
+# Environment, Secrets, and Configurations (NEVER COMMIT)
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+appsettings.Development.json
+appsettings.Local.json
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers (Root and Module levels)
+# ------------------------------------------------------------------------------
+# Node.js / JavaScript Modules
+node_modules/
+.npm/
+.yarn/
+yarn-error.log
+
+# Java / Kotlin / Maven / Gradle Modules
+.gradle/
+build/
+target/
+out/
+.mvn/
+*.class
+
+# Python Modules
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Go Modules
+/bin/
+/pkg/
+
+# ------------------------------------------------------------------------------
+# Modular Monolith Specific Builds & Artifacts
+# ------------------------------------------------------------------------------
+# Ignore compiled artifacts or builds from specific bounded contexts/modules
+dist/
+build-artifacts/
+artifacts/
+out-tsc/
+
+# ------------------------------------------------------------------------------
+# Database & Storage (Local Development Data)
+# ------------------------------------------------------------------------------
+.database/
+*.db
+*.sqlite
+/storage/logs/
+/storage/framework/
+/storage/app/public/
+
+# ------------------------------------------------------------------------------
+# Testing & Code Quality
+# ------------------------------------------------------------------------------
+.coverage
+coverage/
+.nyc_output
+.eslintcache
+.stylelintcache
