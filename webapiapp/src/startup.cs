@@ -1,6 +1,6 @@
 
 
-public static class startup
+public static class Startup
 {
     public static void AddAppServices(this WebApplicationBuilder builder)
     {
@@ -17,6 +17,7 @@ public static class startup
         }
         // app.UseHttpsRedirection();
         app.UseAuthorization();
+        app.MapGet("/", () => "welcome to cj webapiapp");
         app.MapControllers();
     }
 }
