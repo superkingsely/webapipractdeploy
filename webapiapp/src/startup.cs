@@ -10,6 +10,7 @@ public static class Startup
     }
     public static void UseAppServices(this WebApplication app)
     {
+        app.UseMiddleware<SwaggerBasicAuthMiddleware>();
             app.UseSwagger();
             app.UseSwaggerUI();
         
