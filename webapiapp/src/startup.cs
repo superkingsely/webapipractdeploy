@@ -1,12 +1,17 @@
 
 
+using infrastructure.src.persistence;
+
 public static class Startup
 {
+  
+
     public static void AddAppServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        builder.Services.ConfigureDatabaseDependencies(builder.Configuration);
     }
     public static void UseAppServices(this WebApplication app)
     {
